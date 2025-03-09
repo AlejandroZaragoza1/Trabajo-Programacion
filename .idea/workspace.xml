@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8eb1f928-5640-45ce-9d40-e29502712483" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Cache/Cache.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Cache/CacheLRU.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Services/CSVservices.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/models/Jugador.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/models/Jugador.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Cache/CacheLRU.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Cache/CacheLRU.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +120,7 @@
       <workItem from="1741099949736" duration="3572000" />
       <workItem from="1741103767087" duration="9408000" />
       <workItem from="1741299564324" duration="1775000" />
-      <workItem from="1741476130327" duration="4669000" />
+      <workItem from="1741476130327" duration="5357000" />
     </task>
     <servers />
   </component>

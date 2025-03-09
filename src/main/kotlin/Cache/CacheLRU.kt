@@ -8,11 +8,11 @@ open class CacheLRU <K, V>(private val capacity: Int = CACHE_SIZE): Cache<K, V> 
 
     private val cache = object : LinkedHashMap<K, V>(capacity) {}
 
-    override fun get(key: K): V? {
+    override operator fun get(key: K): V? {
         logger.debug { "Valor de la cache $key" }
         return cache[key]
     }
-    override fun set(key: K, value: V): V? {
+    override operator fun set(key: K, value: V): V? {
         logger.debug { "Guardando valor en la cache con clave $key" }
         cache[key] = value
         return value
