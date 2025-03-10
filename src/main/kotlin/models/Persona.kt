@@ -1,21 +1,30 @@
 package dev.alejandrozaragoza.models
 
-import java.time.LocalDate
+import kotlinx.serialization.Serializable
 
-open class Persona(
-    val id: Int = NEW_ID,
-    val nombre: String,
-    val apellido: String,
-    val fechaNacimiento: LocalDate,
-    val fechaIncorporacion: LocalDate,
-    val salario: Double,
-    val pais: String
+
+@Serializable
+abstract class Persona(
+    val id: Long,
+    var nombre: String,
+    var apellido: String,
+    var fechaNacimiento: String,
+    var fechaIncorporacion: String,
+    var salario: Double?,
+    var pais: String,
 ) {
-    fun copy(id: Int): Persona {
-        return Persona(id, nombre, apellido, fechaNacimiento, fechaIncorporacion, salario, pais)
-    }
 
     companion object{
-        val NEW_ID = 1
+        val NEW_ID = 1L
     }
+
+    abstract fun copy(
+        id: Long = this.id,
+        nombre: String = this.nombre,
+        apellido: String = this.apellido,
+        fechaNacimiento: String = this.fechaNacimiento,
+        fechaIncorporacion: String = this.fechaNacimiento,
+        salario: Double = this.salario!!,
+        pais: String = this.pais,
+    ): Persona
 }

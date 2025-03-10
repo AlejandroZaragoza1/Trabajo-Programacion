@@ -1,19 +1,39 @@
 package dev.alejandrozaragoza.models
 
-import java.time.LocalDate
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 class Entrenador(
-    val especialidad: Especialidad,
-    id: Int = NEW_ID,
+    id: Long,
     nombre: String,
     apellido: String,
-    fechaNacimiento: LocalDate,
-    fechaIncorporacion: LocalDate,
-    salario: Double,
-    pais: String
-):Persona(id, nombre, apellido, fechaNacimiento, fechaIncorporacion, salario, pais){
-}
+    fechaNacimiento: String,
+    fechaIncorporacion: String,
+    salario: Double?,
+    pais: String,
+    var especialidad: Especialidad?
 
-enum class Especialidad{
-    PERSONAL,PORTERO,ASISTENTE
+) : Persona(id, nombre, apellido, fechaNacimiento, fechaIncorporacion, salario, pais){
+
+    override fun copy(
+        id: Long,
+        nombre: String,
+        apellido: String,
+        fechaNacimiento: String,
+        fechaIncorporacion: String,
+        salario: Double,
+        pais: String
+    ): Persona{
+        return Entrenador(id, nombre, apellido, fechaNacimiento, fechaIncorporacion, salario, pais, especialidad)
+    }
+
+    override fun toString(): String{
+        return("Entrenador(id=$id, nombre=$nombre, apellido=$apellido, fechaNacimiento=$fechaNacimiento, fechaIncorporacion=$fechaIncorporacion, salario=$salario, pais=$pais, especializacion=$especialidad)")
+    }
+
+    @Serializable
+    enum class Especialidad {
+        @SerialName("especialidad")
+        ENTRENADOR_ASISTENTE, ENTRENADOR_PORTEROS, ENTRENADOR_PRINCIPAL
+    }
 }

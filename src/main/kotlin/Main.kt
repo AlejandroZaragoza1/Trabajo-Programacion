@@ -1,5 +1,9 @@
 package dev.alejandrozaragoza
 
 fun main() {
-    println("Hello World!")
+    val csvService = CSVServices()
+    val personas = csvService.readCSV()
+    for (persona in personas) {
+        println(persona)
+    }
 }
